@@ -2,17 +2,17 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Box } from 'theme-ui'
+import { Box } from "theme-ui"
 
 const Header = () => (
-  <header >
+  <header>
     <Box
       sx={{
         maxWidth: 512,
-        mx: 'auto',
+        mx: "auto",
         px: 3,
         py: 4,
-        textAlign: 'center'
+        textAlign: "center",
       }}
     >
       <h1 style={{ margin: 0 }}>

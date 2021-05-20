@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Box } from 'theme-ui'
+import { Box } from "theme-ui"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -12,11 +12,12 @@ const IndexPage = () => (
     <Box
       sx={{
         maxWidth: 1200,
-        mx: 'auto',
+        mx: "auto",
         px: 3,
         py: 4,
-        textAlign: 'center'
-      }}>
+        textAlign: "center",
+      }}
+    >
       <SearchList />
     </Box>
   </Layout>

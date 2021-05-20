@@ -1,14 +1,11 @@
-
 import React from "react"
 import { graphql } from "gatsby"
-import { Box } from 'theme-ui'
+import { Box } from "theme-ui"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-
 const PokemonPage = ({ data }) => {
-
   const page = data.allPokemon.pokemon
 
   console.log(page)
@@ -19,22 +16,21 @@ const PokemonPage = ({ data }) => {
       <Box
         sx={{
           maxWidth: 1200,
-          mx: 'auto',
+          mx: "auto",
           px: 3,
           py: 4,
-          textAlign: 'center'
-        }}>
-          <h1>{page.name}</h1>
-          {page.number}
+          textAlign: "center",
+        }}
+      >
+        <h1>{page.name}</h1>
+        {page.number}
       </Box>
-      
     </Layout>
   )
 }
 
-
 export const pokemonPageQuery = graphql`
-  query ($id: String) {
+  query($id: String) {
     allPokemon {
       pokemon(id: $id) {
         id
@@ -48,7 +44,3 @@ export const pokemonPageQuery = graphql`
 `
 
 export default PokemonPage
-
-
-
-

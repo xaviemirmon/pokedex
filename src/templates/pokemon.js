@@ -79,7 +79,7 @@ const PokemonPage = ({ data }) => {
             <Box>
               <Heading as={`h3`}>Weight</Heading>
               <p>
-                Min. {page.weight.minimum} / Max. {page.weight.minimum})
+                Min. {page.weight.minimum} / Max. {page.weight.maximum
               </p>
             </Box>
           ) : null}

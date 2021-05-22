@@ -102,6 +102,8 @@ export const SearchList = () => {
             textAlign: `center`,
             maxWidth: 800,
             fontFamily: theme.fonts.body,
+            mx: 1,
+            my: 1,
           }}
           placeholder="Enter search text..."
           value={query}
@@ -111,6 +113,8 @@ export const SearchList = () => {
             onClick={() => setQuery("")}
             sx={{
               marginLeft: 2,
+              mx: 1,
+              my: 1,
             }}
           >
             Reset

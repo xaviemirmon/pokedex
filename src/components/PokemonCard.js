@@ -19,7 +19,7 @@ export const PokemonCard = ({ id, name, number, image }) => {
       <Card
         sx={{
           maxWidth: 256,
-          mx: auto
+          mx: `auto`
         }}
       >
         <Box

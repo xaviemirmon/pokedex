@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Box } from "theme-ui"
 
 const Header = () => (
-  <header>
+  <header data-testid="header">
     <Box
       sx={{
         maxWidth: 512,

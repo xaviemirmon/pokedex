@@ -16,6 +16,7 @@ const IndexPage = () => (
         margin: 0,
         display: `none`,
       }}
+      data-testid="index-heading"
     >
       Pokedex
     </Heading>

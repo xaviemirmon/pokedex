@@ -1,7 +1,7 @@
 // Package imports
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Grid, Button, Input, Box, Alert } from "theme-ui"
+import { Grid, Button, Input, Box, Text } from "theme-ui"
 
 // Component imports
 import { PokemonCard } from "./PokemonCard"
@@ -54,6 +54,7 @@ export const SearchList = () => {
       if (current_page !== i) {
         elements.push(
           <Button
+            key={i}
             onClick={() => setPage(i)}
             sx={{
               mx: 1,
@@ -66,6 +67,7 @@ export const SearchList = () => {
       } else {
         elements.push(
           <Button
+            key={i}
             onClick={() => setPage(i)}
             sx={{
               mx: 1,
@@ -82,22 +84,39 @@ export const SearchList = () => {
   }
 
   return (
-    <>
+    <Box data-testid="SearchList">
       {/* Search bar */}
-      <Input
-        onChange={e => {
-          setQuery(e.target.value)
-          setPage(1)
-        }}
+      <Box
         sx={{
           mx: "auto",
           marginBottom: 4,
-          maxWidth: 800,
-          textAlign: "center",
-          fontFamily: theme.fonts.body,
         }}
-        placeholder="Enter search text..."
-      />
+      >
+        <Input
+          onChange={e => {
+            setQuery(e.target.value)
+            setPage(1)
+          }}
+          sx={{
+            display: `inline`,
+            textAlign: `center`,
+            maxWidth: 800,
+            fontFamily: theme.fonts.body,
+          }}
+          placeholder="Enter search text..."
+          value={query}
+        />
+        {query !== "" ? (
+          <Button
+            onClick={() => setQuery("")}
+            sx={{
+              marginLeft: 2,
+            }}
+          >
+            Reset
+          </Button>
+        ) : null}
+      </Box>
 
       {filteredResults.total_pages > 0 ? (
         <>
@@ -111,6 +130,7 @@ export const SearchList = () => {
           >
             {filteredResults.data.map(result => (
               <PokemonCard
+                key={result.id}
                 id={result.id}
                 name={result.name}
                 number={result.number}
@@ -128,6 +148,8 @@ export const SearchList = () => {
                 sx={{
                   mx: 2,
                   my: 1,
+                  background: theme.colors.tertiary,
+                  color: theme.colors.text,
                 }}
               >
                 Previous
@@ -144,6 +166,8 @@ export const SearchList = () => {
                 sx={{
                   mx: 2,
                   my: 1,
+                  background: theme.colors.tertiary,
+                  color: theme.colors.text,
                 }}
               >
                 Next
@@ -153,11 +177,11 @@ export const SearchList = () => {
         </>
       ) : (
         // No results
-        <Alert variant='secondary' mb={2}>
+        <Text>
           Oops... No matches for&nbsp;<em>{query}</em>
-        </Alert>
+        </Text>
       )}
-    </>
+    </Box>
   )
 }
 

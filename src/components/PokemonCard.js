@@ -1,6 +1,7 @@
+/** @jsx jsx */
+
 // Package Imports
-import React from "react"
-import { Box, Card, Text } from "theme-ui"
+import { Box, Card, Text, jsx } from "theme-ui"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
@@ -9,10 +10,10 @@ import theme from "../gatsby-plugin-theme-ui/index"
 
 export const PokemonCard = ({ id, name, number, image }) => {
   return (
-    <Link 
+    <Link
       to={name.toLowerCase()}
       sx={{
-        textDecoration: `none`
+        textDecoration: `none`,
       }}
     >
       <Card
@@ -22,7 +23,7 @@ export const PokemonCard = ({ id, name, number, image }) => {
       >
         <Box
           sx={{
-            width: `100%`
+            width: `100%`,
           }}
         >
           <GatsbyImage
@@ -34,7 +35,7 @@ export const PokemonCard = ({ id, name, number, image }) => {
             alt={name}
           />
         </Box>
-        <Text 
+        <Text
           key={id}
           sx={{
             color: theme.colors.secondary,

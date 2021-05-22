@@ -7,16 +7,14 @@
 // You can delete this file if you're not using it
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 
-exports.createResolvers = async (
-  {
-    actions,
-    cache,
-    createNodeId,
-    createResolvers,
-    store,
-    reporter,
-  },
-) => {
+exports.createResolvers = async ({
+  actions,
+  cache,
+  createNodeId,
+  createResolvers,
+  store,
+  reporter,
+}) => {
   const { createNode } = actions
 
   await createResolvers({
@@ -39,8 +37,6 @@ exports.createResolvers = async (
     },
   })
 }
-
-
 
 exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(`
@@ -65,5 +61,4 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     })
   })
-
 }

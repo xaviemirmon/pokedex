@@ -37,8 +37,8 @@ module.exports = {
       options: {
         typeName: "Pokemon",
         fieldName: "allPokemon",
-        url: `https://graphql-pokemon2.vercel.app`
-      }
+        url: `https://graphql-pokemon2.vercel.app`,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

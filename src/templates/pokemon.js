@@ -1,7 +1,10 @@
+// Package imports
 import React from "react"
 import { graphql } from "gatsby"
 import { Box } from "theme-ui"
+import { GatsbyImage } from "gatsby-plugin-image"
 
+// Component Imports
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
@@ -12,7 +15,7 @@ const PokemonPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title={page.name} />
       <Box
         sx={{
           maxWidth: 1200,
@@ -23,7 +26,29 @@ const PokemonPage = ({ data }) => {
         }}
       >
         <h1>{page.name}</h1>
-        {page.number}
+        <GatsbyImage
+          image={page.imageFile.childImageSharp.gatsbyImageData}
+          style={{
+            maxWidth: `100%`,
+          }}
+          alt={page.name}
+        />
+        <h2>{page.number}</h2>
+        <p>Max CP: {page.maxCP}</p>
+        <p>Max HP: {page.maxHP}</p>
+        <Box>
+          <p>Weaknesses:</p>
+          {page.weaknesses.map(result => (
+            <p>{result}</p>
+          ))}
+        </Box>
+        <Box>
+          <p>Types:</p>
+          {page.types.map(result => (
+            <p>{result}</p>
+          ))}
+        </Box>
+        <p>Max HP: {page.maxHP}</p>
       </Box>
     </Layout>
   )
@@ -34,10 +59,41 @@ export const pokemonPageQuery = graphql`
     allPokemon {
       pokemon(id: $id) {
         id
-        name
-        number
-        maxHP
         maxCP
+        maxHP
+        weaknesses
+        types
+        resistant
+        number
+        name
+        fleeRate
+        evolutionRequirements {
+          amount
+          name
+        }
+        attacks {
+          fast {
+            damage
+            name
+            type
+          }
+          special {
+            damage
+            name
+            type
+          }
+        }
+        image
+        imageFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        classification
+        weight {
+          maximum
+          minimum
+        }
       }
     }
   }

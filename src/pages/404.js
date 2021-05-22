@@ -1,5 +1,7 @@
-import * as React from "react"
+// Package imports
+import React from "react"
 
+// Component import
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 

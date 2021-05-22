@@ -1,12 +1,17 @@
+// Package imports
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Grid, Button, Input, Box } from "theme-ui"
+import { Grid, Button, Input, Box, Alert } from "theme-ui"
 
+// Component imports
 import { PokemonCard } from "./PokemonCard"
 
+// Utilities imports
 import { paginator } from "../utils/utils"
+import theme from "../gatsby-plugin-theme-ui/index"
 
 export const SearchList = () => {
+  // Query to get Pokémons' teaser data
   const data = useStaticQuery(graphql`
     query GetSearchData {
       allPokemon {
@@ -17,7 +22,11 @@ export const SearchList = () => {
           image
           imageFile {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(
+                height: 180
+                placeholder: TRACED_SVG
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
@@ -25,8 +34,10 @@ export const SearchList = () => {
     }
   `)
 
+  // States
   const [query, setQuery] = useState("")
   const [page, setPage] = useState(1)
+
   const results = data.allPokemon.pokemons
 
   const filteredResults = paginator(
@@ -37,25 +48,67 @@ export const SearchList = () => {
     16
   )
 
-  const paginationLinks = number => {
+  const paginationLinks = (number, current_page) => {
     let elements = []
     for (let i = 1; i <= number; i++) {
-      elements.push(<Button onClick={() => setPage(i)}>{i}</Button>)
+      if (current_page !== i) {
+        elements.push(
+          <Button
+            onClick={() => setPage(i)}
+            sx={{
+              mx: 1,
+              my: 1,
+            }}
+          >
+            {i}
+          </Button>
+        )
+      } else {
+        elements.push(
+          <Button
+            onClick={() => setPage(i)}
+            sx={{
+              mx: 1,
+              my: 1,
+              background: theme.colors.secondary,
+            }}
+          >
+            {i}
+          </Button>
+        )
+      }
     }
     return elements
   }
 
   return (
-    <div>
+    <>
+      {/* Search bar */}
       <Input
         onChange={e => {
           setQuery(e.target.value)
           setPage(1)
         }}
+        sx={{
+          mx: "auto",
+          marginBottom: 4,
+          maxWidth: 800,
+          textAlign: "center",
+          fontFamily: theme.fonts.body,
+        }}
+        placeholder="Enter search text..."
       />
+
       {filteredResults.total_pages > 0 ? (
         <>
-          <Grid gap={5} columns={[2, null, 4]}>
+          {/* Pokemon grid */}
+          <Grid
+            gap={5}
+            columns={[1, 2, 3, 4]}
+            sx={{
+              marginBottom: 4,
+            }}
+          >
             {filteredResults.data.map(result => (
               <PokemonCard
                 id={result.id}
@@ -66,27 +119,45 @@ export const SearchList = () => {
             ))}
           </Grid>
 
+          {/* Pagination */}
           <Box className="pager">
+            {/* Previous button */}
             {filteredResults.pre_page > 0 ? (
-              <Button onClick={() => setPage(filteredResults.pre_page)}>
+              <Button
+                onClick={() => setPage(filteredResults.pre_page)}
+                sx={{
+                  mx: 2,
+                  my: 1,
+                }}
+              >
                 Previous
               </Button>
             ) : null}
-            {paginationLinks(filteredResults.total_pages)}
-            {console.log(filteredResults)}
+
+            {/* Page links */}
+            {paginationLinks(filteredResults.total_pages, filteredResults.page)}
+
+            {/* Next Button */}
             {filteredResults.next_page > 0 ? (
-              <Button onClick={() => setPage(filteredResults.next_page)}>
+              <Button
+                onClick={() => setPage(filteredResults.next_page)}
+                sx={{
+                  mx: 2,
+                  my: 1,
+                }}
+              >
                 Next
               </Button>
             ) : null}
           </Box>
         </>
       ) : (
-        <p>
-          Oops... No matches for <em>{query}</em>
-        </p>
+        // No results
+        <Alert variant='secondary' mb={2}>
+          Oops... No matches for&nbsp;<em>{query}</em>
+        </Alert>
       )}
-    </div>
+    </>
   )
 }
 

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  data-testid="header"
+>
+  <div
+    className="css-1ksuflg"
+  >
+    <a
+      href="/"
+    />
+  </div>
+</header>
+`;

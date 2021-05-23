@@ -14,10 +14,18 @@ const theme = {
   fonts: {
     ...swiss.fonts,
     body:
-      "FlexoW01-Demi, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+      "Exo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
   },
   styles: {
     ...swiss.styles,
+    a: {
+      ...swiss.styles.a,
+      textDecoration: `none`,
+      color: `secondary`,
+      "&:hover": {
+        textDecoration: `underline`,
+      },
+    },
   },
 }
 

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+Array [
+  <header
+    data-testid="header"
+  >
+    <div
+      className="css-1ksuflg"
+    >
+      <a
+        href="/"
+      />
+    </div>
+  </header>,
+  <div
+    style={
+      Object {
+        "margin": "0 auto",
+      }
+    }
+  >
+    <main>
+      <p>
+        Testing
+      </p>
+    </main>
+    <footer
+      className="css-cjzi5r-Footer"
+    >
+      Built with
+       
+      <a
+        className="css-vurnku"
+        href="https://www.gatsbyjs.com"
+      >
+        Gatsby
+      </a>
+       
+      using data from
+       
+      <a
+        className="css-vurnku"
+        href="https://graphql-pokemon2.vercel.app"
+      >
+        graphql-pokemon2.vercel.app
+      </a>
+      . All images are copyright to their respective owners.
+    </footer>
+  </div>,
+]
+`;

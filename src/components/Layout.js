@@ -1,24 +1,20 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
+// Package imports
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 
+// Component imports
 import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="//db.onlinewebfonts.com/c/da333251c966d4ed2f0a7b7de061254f?family=FlexoW01-Demi"
+          href="https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap"
           rel="stylesheet"
-          type="text/css"
         />
       </Helmet>
       <Header />
@@ -28,17 +24,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            margin: `0 auto`,
-            marginTop: `2rem`,
-            textAlign: `center`,
-          }}
-        >
-          Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

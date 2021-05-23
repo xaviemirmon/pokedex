@@ -1,9 +1,11 @@
+// Package imports
 import React from "react"
 import { render } from "@testing-library/react"
 import { useStaticQuery } from "gatsby"
-
 import Helmet from "react-helmet"
-import SEO from "../seo"
+
+// Component imports
+import SEO from "../Seo"
 
 describe("SEO component", () => {
   beforeAll(() => {

@@ -5,23 +5,29 @@ import { Box, Card, Text, jsx } from "theme-ui"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
-// Theme
+// Theme import
 import theme from "../gatsby-plugin-theme-ui/index"
 
 export const PokemonCard = ({ id, name, number, image }) => {
   return (
+    // Link to
     <Link
       to={name.toLowerCase()}
       sx={{
         textDecoration: `none`,
+        color: `secondary`,
+        "&:hover": {
+          textDecoration: `underline`,
+        },
       }}
     >
       <Card
         sx={{
           maxWidth: 256,
-          mx: `auto`
+          mx: `auto`,
         }}
       >
+        {/* Pokemon image */}
         <Box
           sx={{
             width: `100%`,
@@ -36,6 +42,8 @@ export const PokemonCard = ({ id, name, number, image }) => {
             alt={name}
           />
         </Box>
+
+        {/* Pokemon text */}
         <Text
           key={id}
           sx={{

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://pokedex.xavie.mirmon.co.uk" target="_blank">
-    <img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Pokedex_logo.png" height="100" />
+    <img alt="Pokedex" src="https://pokedex.xavie.mirmon.co.uk/Pokedex_logo.png" height="100" />
   </a>
 </p>
 <h1 align="center">
@@ -129,6 +129,7 @@ Should you wish to build and server it else run the following:
 2.  **`cypress`**: provides examples of e2e tests.  Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have 
 
 3.  **`Google Lighthouse`**: Google Lighthouse is performed on each deploy Gatsby Cloud.  The latest deployment has a 99 performance score! 
+<img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Lighthouse.png" />
 
 ## 🛣 Roadmap V2
 

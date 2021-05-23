@@ -48,7 +48,7 @@ export const SearchList = () => {
     16
   )
 
-  // Function to build out the 
+  // Function to build out the pagination
   const paginationLinks = (number, current_page) => {
     let elements = []
     for (let i = 1; i <= number; i++) {

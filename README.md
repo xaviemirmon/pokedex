@@ -7,13 +7,13 @@
   Gatsby Pokédex
 </h1>
 
-This site is a testbed that show how Gatsby works and a fun project to play around with Pokémon.  This site is a Progressive Web App (PWA) so you can install in on your device (if supported).
+This site is a testbed that show how Gatsby works and a fun project to play around with Pokémon. This site is a Progressive Web App (PWA) so you can install in on your device (if supported).
 
 ## Demo
 
 A demo of this project is available on <a href="https://pokedex.xavie.mirmon.co.uk" target="_blank">https://pokedex.xavie.mirmon.co.uk</a>
 
-## Prerequisites 
+## Prerequisites
 
 Node – 15.8.0
 
@@ -53,12 +53,12 @@ Yarn — 1.22.10
 
 ## Building the site
 
-This site is hosted on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/).  You can fork this repo and to your Gatsby Cloud accuont to host it.
+This site is hosted on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/). You can fork this repo and to your Gatsby Cloud accuont to host it.
 
 Should you wish to build and server it else run the following:
 
 ```shell
-gatsby build 
+gatsby build
 gatsby serve
 ```
 
@@ -66,7 +66,7 @@ gatsby serve
 
 1.  **`/src/components/Footer.js`**: This file contains all of the logic for the `Footer` component including the links and text.
 
-2.   **`/src/components/Header.js`**: This file contains all of the logic for the `Header` component including the Pokédex logo and link.
+2.  **`/src/components/Header.js`**: This file contains all of the logic for the `Header` component including the Pokédex logo and link.
 
 3.  **`/src/components/Layout.js`**: This file contains all of the logic for the `Layout` component which is shared across all pages.
 
@@ -90,7 +90,6 @@ gatsby serve
 
 13. **`gatsby-config.js`**: The file where all the plugin settings are configured including the mapping for the graphql endpoint.
 
-
 ## 🔗 Dependencies
 
 1.  **`@theme-ui/presets`**: Provides theme-ui presets so that we can load in and extend `Swiss`.
@@ -107,36 +106,36 @@ gatsby serve
 
 7.  **`gatsby-plugin-offline`**: Provides offline support for the PWA.
 
-7.  **`gatsby-plugin-react-helmet`**: `react-helmet` integration to bubble up information such as `<title>`, `<description>`, etc. information to the `<head>`.
+8.  **`gatsby-plugin-react-helmet`**: `react-helmet` integration to bubble up information such as `<title>`, `<description>`, etc. information to the `<head>`.
 
-8.  **`gatsby-plugin-sharp`**: Transforms the images for `gatsby-plugin-image`.
+9.  **`gatsby-plugin-sharp`**: Transforms the images for `gatsby-plugin-image`.
 
-9.  **`gatsby-plugin-theme-ui`**: Provide Gatsby integration for `theme-ui`.
+10. **`gatsby-plugin-theme-ui`**: Provide Gatsby integration for `theme-ui`.
 
-10.  **`gatsby-source-filesystem`**: Allows Gatsby to source local files as nodes and use them in the GraphQL layer.
+11. **`gatsby-source-filesystem`**: Allows Gatsby to source local files as nodes and use them in the GraphQL layer.
 
-11.  **`gatsby-source-graphql`**: Allows Gatsby to source GraphQL and use them in the GraphQL layer.
+12. **`gatsby-source-graphql`**: Allows Gatsby to source GraphQL and use them in the GraphQL layer.
 
-12.  **`gatsby-transformer-sharp`**: Transforms the images for `gatsby-plugin-image`.
+13. **`gatsby-transformer-sharp`**: Transforms the images for `gatsby-plugin-image`.
 
-13.  **`prop-types`**: Allows you to specify property types in your components.
+14. **`prop-types`**: Allows you to specify property types in your components.
 
-14.  **`react`**: React...nuff said!
+15. **`react`**: React...nuff said!
 
-15.  **`react-dom`**: React's virtual DOM where all the fancy tree updates happen.
+16. **`react-dom`**: React's virtual DOM where all the fancy tree updates happen.
 
-16.  **`react-helmet`**: Bubbles up information such as `<title>`, `<description>`, etc. information to the `<head>`.
+17. **`react-helmet`**: Bubbles up information such as `<title>`, `<description>`, etc. information to the `<head>`.
 
-17.  **`theme-ui`**: Provides a themeing layer based on Emotion.
+18. **`theme-ui`**: Provides a themeing layer based on Emotion.
 
 ## 🧪 Testing
 
-1.  **`jest`**: provides examples of unit tests.  Run `yarn test:jest` to perform the tests in the `__tests__` directories.
+1.  **`jest`**: provides examples of unit tests. Run `yarn test:jest` to perform the tests in the `__tests__` directories.
 
-2.  **`cypress`**: provides examples of e2e tests.  Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have the site running in development mode `gatsby develop`.
+2.  **`cypress`**: provides examples of e2e tests. Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have the site running in development mode `gatsby develop`.
 
-3.  **`Google Lighthouse`**: Google Lighthouse is performed on each deploy Gatsby Cloud.  The latest deployment has a 99 performance score! 
-<img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Lighthouse.png" />
+3.  **`Google Lighthouse`**: Google Lighthouse is performed on each deploy Gatsby Cloud. The latest deployment has a 99 performance score!
+    <img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Lighthouse.png" />
 
 ## 🛣 Roadmap V2
 

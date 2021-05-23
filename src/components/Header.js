@@ -18,10 +18,10 @@ const Header = () => (
         textAlign: "center",
       }}
     >
-      <Link 
+      <Link
         to="/"
         sx={{
-          fontSize: `0px`
+          fontSize: `0px`,
         }}
       >
         <StaticImage

@@ -16,6 +16,7 @@ A demo of this project is available on <a href="https://pokedex.xavie.mirmon.co.
 ## Prerequisites 
 
 Node – 15.8.0
+
 Yarn — 1.22.10
 
 ## 🚀 Quick start
@@ -57,7 +58,8 @@ This site is hosted on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/).  You can
 Should you wish to build and server it else run the following:
 
     ```shell
-    gatsby build && gatsby serve
+    gatsby build 
+    gatsby serve
     ```
 
 ## 🧐 What's inside?

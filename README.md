@@ -64,11 +64,11 @@ gatsby serve
 
 ## 🧐 What's inside?
 
-1.  **`/src/components/Footer.js`**: This file contains all of the logic for the `Footer` component including the links and text
+1.  **`/src/components/Footer.js`**: This file contains all of the logic for the `Footer` component including the links and text.
 
-2.   **`/src/components/Header.js`**: This file contains all of the logic for the `Header` component including the Pokédex logo and link
+2.   **`/src/components/Header.js`**: This file contains all of the logic for the `Header` component including the Pokédex logo and link.
 
-3.  **`/src/components/Layout.js`**: This file contains all of the logic for the `Layout` component which is shared across all pages
+3.  **`/src/components/Layout.js`**: This file contains all of the logic for the `Layout` component which is shared across all pages.
 
 4.  **`/src/components/PokemonCard.js`**: This file contains all of the logic for the `PokemonCard` component which contains all the styles and layout for the individual Pokémons on the site's hompage search experience.
 
@@ -88,52 +88,52 @@ gatsby serve
 
 12. **`README.md`**: A text file containing useful reference information about this project.
 
-13. **`gatsby-config.js`**: The file where all the plugin settings are configured including the mapping for the graphql endpoint
+13. **`gatsby-config.js`**: The file where all the plugin settings are configured including the mapping for the graphql endpoint.
 
 
 ## 🔗 Dependencies
 
-1.  **`@theme-ui/presets`**: Provides theme-ui presets so that we can load in and extend `Swiss`
+1.  **`@theme-ui/presets`**: Provides theme-ui presets so that we can load in and extend `Swiss`.
 
-2.  **`gatsby`**: Loads in Gatsby
+2.  **`gatsby`**: Loads in Gatsby.
 
 3.  **`gatsby-link`**: Gatsby Link prefetches pages and loads in changes extremely quick!
 
-4.  **`gatsby-plugin-gatsby-cloud`**: Provides enhancements for the Gatsby Cloud Platform
+4.  **`gatsby-plugin-gatsby-cloud`**: Provides enhancements for the Gatsby Cloud platform.
 
-5.  **`gatsby-plugin-image`**: Creates image derivatives and lazy loads images using the new Gatsby 3.x updates
+5.  **`gatsby-plugin-image`**: Creates image derivatives and lazy loads images using the new Gatsby 3.x updates.
 
-6.  **`gatsby-plugin-manifest`**: Provides a manifest.json for the PWA
+6.  **`gatsby-plugin-manifest`**: Provides a manifest.json for the PWA.
 
-7.  **`gatsby-plugin-offline`**: Provides offline support for the PWA
+7.  **`gatsby-plugin-offline`**: Provides offline support for the PWA.
 
 7.  **`gatsby-plugin-react-helmet`**: `react-helmet` integration to bubble up information such as `<title>`, `<description>`, etc. information to the `<head>`.
 
-8.  **`gatsby-plugin-sharp`**: Transforms the images for `gatsby-plugin-image`
+8.  **`gatsby-plugin-sharp`**: Transforms the images for `gatsby-plugin-image`.
 
-9.  **`gatsby-plugin-theme-ui`**: Provide Gatsby integration for `theme-ui`
+9.  **`gatsby-plugin-theme-ui`**: Provide Gatsby integration for `theme-ui`.
 
-10.  **`gatsby-source-filesystem`**: Allows Gatsby to source local files as nodes and use them in the GraphQL layer
+10.  **`gatsby-source-filesystem`**: Allows Gatsby to source local files as nodes and use them in the GraphQL layer.
 
-11.  **`gatsby-source-graphql`**: Allows Gatsby to source GraphQL and use them in the GraphQL layer
+11.  **`gatsby-source-graphql`**: Allows Gatsby to source GraphQL and use them in the GraphQL layer.
 
-12.  **`gatsby-transformer-sharp`**: Transforms the images for `gatsby-plugin-image`
+12.  **`gatsby-transformer-sharp`**: Transforms the images for `gatsby-plugin-image`.
 
-13.  **`prop-types`**: Allows you to specify property types in your components
+13.  **`prop-types`**: Allows you to specify property types in your components.
 
 14.  **`react`**: React...nuff said!
 
-15.  **`react-dom`**: React's virtual DOM where all the fancy tree updates happen
+15.  **`react-dom`**: React's virtual DOM where all the fancy tree updates happen.
 
 16.  **`react-helmet`**: Bubbles up information such as `<title>`, `<description>`, etc. information to the `<head>`.
 
-17.  **`theme-ui`**: Provides a themeing layer based on Emotion
+17.  **`theme-ui`**: Provides a themeing layer based on Emotion.
 
 ## 🧪 Testing
 
 1.  **`jest`**: provides examples of unit tests.  Run `yarn test:jest` to perform the tests in the `__tests__` directories.
 
-2.  **`cypress`**: provides examples of e2e tests.  Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have 
+2.  **`cypress`**: provides examples of e2e tests.  Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have the site running in development mode `gatsby develop`.
 
 3.  **`Google Lighthouse`**: Google Lighthouse is performed on each deploy Gatsby Cloud.  The latest deployment has a 99 performance score! 
 <img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Lighthouse.png" />
@@ -142,4 +142,4 @@ gatsby serve
 
 1.  **`Alogia`**: provide a more robust filtered search with Algolia.
 
-2.  **`Typescript`**: Move code over to TS using Gatsby's new TS support
+2.  **`Typescript`**: Move code over to TS using Gatsby's new TS support.

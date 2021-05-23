@@ -57,10 +57,10 @@ This site is hosted on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/).  You can
 
 Should you wish to build and server it else run the following:
 
-    ```shell
-    gatsby build 
-    gatsby serve
-    ```
+```shell
+gatsby build 
+gatsby serve
+```
 
 ## 🧐 What's inside?
 

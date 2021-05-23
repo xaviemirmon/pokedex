@@ -13,6 +13,11 @@ This site is a testbed that show how Gatsby works and a fun project to play arou
 
 A demo of this project is available on <a href="https://pokedex.xavie.mirmon.co.uk" target="_blank">https://pokedex.xavie.mirmon.co.uk</a>
 
+## Prerequisites 
+
+Node – 15.8.0
+Yarn — 1.22.10
+
 ## 🚀 Quick start
 
 1.  **Clone the repo.**

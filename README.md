@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://pokedex.xavie.mirmon.co.uk" target="_blank">
-    <img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/public/Pokedex_logo.png" height="100" />
+    <img alt="Gatsby" src="https://pokedex.xavie.mirmon.co.uk/Pokedex_logo.png" height="100" />
   </a>
 </p>
 <h1 align="center">

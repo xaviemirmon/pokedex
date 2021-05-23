@@ -34,7 +34,7 @@ export const SearchList = () => {
     }
   `)
 
-  // States
+  // States: we're using React useState hooks to save and update data for the search
   const [query, setQuery] = useState("")
   const [page, setPage] = useState(1)
 
@@ -48,6 +48,7 @@ export const SearchList = () => {
     16
   )
 
+  // Function to build out the 
   const paginationLinks = (number, current_page) => {
     let elements = []
     for (let i = 1; i <= number; i++) {
@@ -133,6 +134,7 @@ export const SearchList = () => {
             }}
           >
             {filteredResults.data.map(result => (
+              // Individual result
               <PokemonCard
                 key={result.id}
                 id={result.id}

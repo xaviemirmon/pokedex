@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// ^^ is the pragma required for using the theme-ui sx prop on non-theme-ui elements
 
 // Package Imports
 import { Box, Card, Text, jsx } from "theme-ui"
@@ -10,7 +11,7 @@ import theme from "../gatsby-plugin-theme-ui/index"
 
 export const PokemonCard = ({ id, name, number, image }) => {
   return (
-    // Link to
+    // Link to pokemon page
     <Link
       to={name.toLowerCase()}
       sx={{

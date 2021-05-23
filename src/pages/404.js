@@ -1,5 +1,6 @@
 // Package imports
 import React from "react"
+import { Box } from "theme-ui"
 
 // Component import
 import Layout from "../components/Layout"

@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// ^^ is the pragma required for using the theme-ui sx prop on non-theme-ui elements
 
 // Package imports
 import { graphql, Link } from "gatsby"

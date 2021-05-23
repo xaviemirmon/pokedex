@@ -6,19 +6,18 @@ Array [
     data-testid="header"
   >
     <div
-      className="css-1ksuflg"
+      className="css-1g1xloh-Header"
     >
       <a
+        className="css-filgdf-Header"
         href="/"
-      />
+      >
+        Pokedex home
+      </a>
     </div>
   </header>,
   <div
-    style={
-      Object {
-        "margin": "0 auto",
-      }
-    }
+    className="css-gkobeh-Layout"
   >
     <main>
       <p>

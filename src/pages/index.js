@@ -14,7 +14,7 @@ const IndexPage = () => (
       as="h1"
       sx={{
         margin: 0,
-        display: `none`,
+        fontSize: `0px`
       }}
       data-testid="index-heading"
     >

@@ -7,8 +7,11 @@
   Gatsby Pokédex
 </h1>
 
+This site is a testbed that show how Gatsby works and a fun project to play around with Pokémon.  This site is a Progressive Web App (PWA) so you can install in on your device (if supported).
 
-This site is a testbed that show 
+## Demo
+
+A demo of this project is available on <a href="https://pokedex.xavie.mirmon.co.uk" target="_blank">https://pokedex.xavie.mirmon.co.uk</a>
 
 ## 🚀 Quick start
 
@@ -23,81 +26,112 @@ This site is a testbed that show
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    First you need to install your packages
 
     ```shell
     cd pokedex/
+    yarn install
+    ```
+
+    Navigate into your new site’s directory and start it up.
+
+    ```shell
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+1.  **Open the source code and start playing!**
 
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Building the site
 
-## 🚀 Quick start (Gatsby Cloud)
+This site is hosted on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/).  You can fork this repo and to your Gatsby Cloud accuont to host it.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+Should you wish to build and server it else run the following:
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+    ```shell
+    gatsby build && gatsby serve
+    ```
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+1.  **`/src/components/Footer.js`**: This file contains all of the logic for the `Footer` component including the links and text
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+2.   **`/src/components/Header.js`**: This file contains all of the logic for the `Header` component including the Pokédex logo and link
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+3.  **`/src/components/Layout.js`**: This file contains all of the logic for the `Layout` component which is shared across all pages
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+4.  **`/src/components/PokemonCard.js`**: This file contains all of the logic for the `PokemonCard` component which contains all the styles and layout for the individual Pokémons on the site's hompage search experience.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+5.  **`/src/components/PokemonFull.js`**: This file contains all of the logic for the `PokemonFull` component which contains all the styles and layout for the individual Pokémons when you navigate from the homepage `IndexPage` to a specific Pokémon.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+6.  **`/src/components/SearchList.js`**: This file contains all of the logic for the `SearchList` component which contains all the styles, states, form elements and layout search expirience on the homepage.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+7.  **`/src/components/Seo`.js**: This file contains all of the logic for the `Seo` component provided by the `gatsby-default-starter` that contains all of the `<head>` SEO information.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+8.  **`/src/image`**: This directory contains necessary images for the app.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+9.  **`/src/pages/index.js`**: This file contains all of the logic for the `IndexPage` component for the homepage which loads in the `SearchList` compoange.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+10. **`/src/pages/404.js`**: This file contains all of the logic for the 404 page.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+11. **`/src/templates/pokemon.js`**: This file contains all of the logic for the `PokemonPage` component for the individual Pokémons which is generated by the query in `gastby-node.js` and renders the `PokemonFull` data.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+12. **`README.md`**: A text file containing useful reference information about this project.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+13. **`gatsby-config.js`**: The file where all the plugin settings are configured including the mapping for the graphql endpoint
 
-12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+## 🔗 Dependencies
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+1.  **`@theme-ui/presets`**: Provides theme-ui presets so that we can load in and extend `Swiss`
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+2.  **`gatsby`**: Loads in Gatsby
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+3.  **`gatsby-link`**: Gatsby Link prefetches pages and loads in changes extremely quick!
 
-## 💫 Deploy
+4.  **`gatsby-plugin-gatsby-cloud`**: Provides enhancements for the Gatsby Cloud Platform
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
+5.  **`gatsby-plugin-image`**: Creates image derivatives and lazy loads images using the new Gatsby 3.x updates
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+6.  **`gatsby-plugin-manifest`**: Provides a manifest.json for the PWA
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+7.  **`gatsby-plugin-offline`**: Provides offline support for the PWA
+
+7.  **`gatsby-plugin-react-helmet`**: `react-helmet` integration to bubble up information such as `<title>`, `<description>`, etc. information to the `<head>`.
+
+8.  **`gatsby-plugin-sharp`**: Transforms the images for `gatsby-plugin-image`
+
+9.  **`gatsby-plugin-theme-ui`**: Provide Gatsby integration for `theme-ui`
+
+10.  **`gatsby-source-filesystem`**: Allows Gatsby to source local files as nodes and use them in the GraphQL layer
+
+11.  **`gatsby-source-graphql`**: Allows Gatsby to source GraphQL and use them in the GraphQL layer
+
+12.  **`gatsby-transformer-sharp`**: Transforms the images for `gatsby-plugin-image`
+
+13.  **`prop-types`**: Allows you to specify property types in your components
+
+14.  **`react`**: React...nuff said!
+
+15.  **`react-dom`**: React's virtual DOM where all the fancy tree updates happen
+
+16.  **`react-helmet`**: Bubbles up information such as `<title>`, `<description>`, etc. information to the `<head>`.
+
+17.  **`theme-ui`**: Provides a themeing layer based on Emotion
+
+## 🧪 Testing
+
+1.  **`jest`**: provides examples of unit tests.  Run `yarn test:jest` to perform the tests in the `__tests__` directories.
+
+2.  **`cypress`**: provides examples of e2e tests.  Run `yarn test:cy` to perform the tests in the `cypress` directory which also perform accessiblity checks using the axe library. Note: you need have 
+
+3.  **`Google Lighthouse`**: Google Lighthouse is performed on each deploy Gatsby Cloud.  The latest deployment has a 99 performance score! 
+
+## 🛣 Roadmap V2
+
+1.  **`Alogia`**: provide a more robust filtered search with Algolia.
+
+2.  **`Typescript`**: Move code over to TS using Gatsby's new TS support

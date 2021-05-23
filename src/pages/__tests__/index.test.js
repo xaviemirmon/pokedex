@@ -75,8 +75,6 @@ describe("Index component", () => {
       <IndexPage data={mockData} location={window.location} />
     )
 
-    console.log(getByTestId("index-heading"))
-
     expect(getByTestId("header"))
     expect(getByTestId("SearchList"))
     expect(getByTestId("index-heading")).toHaveTextContent("Pokedex")

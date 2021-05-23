@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="css-cjzi5r-Footer"
+>
+  Built with
+   
+  <a
+    className="css-vurnku"
+    href="https://www.gatsbyjs.com"
+  >
+    Gatsby
+  </a>
+   
+  using data from
+   
+  <a
+    className="css-vurnku"
+    href="https://graphql-pokemon2.vercel.app"
+  >
+    graphql-pokemon2.vercel.app
+  </a>
+  . All images are copyright to their respective owners.
+</footer>
+`;

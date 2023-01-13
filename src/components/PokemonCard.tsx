@@ -3,13 +3,20 @@
 
 // Package Imports
 import { Box, Card, Text, jsx } from "theme-ui"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 // Theme import
 import theme from "../gatsby-plugin-theme-ui/index"
 
-export const PokemonCard = ({ id, name, number, image }) => {
+type PokemonCardPropsType = {
+  id: string
+  name: string
+  number: number
+  image: IGatsbyImageData
+}
+
+export const PokemonCard = ({ id, name, number, image }:PokemonCardPropsType ) => {
   return (
     // Link to pokemon page
     <Link

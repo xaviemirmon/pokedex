@@ -1,5 +1,4 @@
 /** @jsx jsx */
-// ^^ is the pragma required for using the theme-ui sx prop on non-theme-ui elements
 
 // Package imports
 import React from "react"
@@ -28,8 +27,8 @@ const Header = () => (
           src="../images/Pokedex_logo.png"
           width={300}
           quality={95}
-          placeholder={"tracedSVG"}
-          formats={["AUTO", "WEBP", "AVIF"]}
+          placeholder={"dominantColor"}
+          formats={["auto", "webp", "avif"]}
           alt="Pokedex logo"
         />
         Pokedex home

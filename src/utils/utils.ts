@@ -1,4 +1,7 @@
-export const paginator = (items, current_page, per_page_items) => {
+import { IGatsbyImageData } from "gatsby-plugin-image"
+import { PokemonCardResultsType } from "../components/SearchList"
+
+export const paginator = (items: PokemonCardResultsType[], current_page:number, per_page_items: number) => {
   let page = current_page || 1,
     per_page = per_page_items || 10,
     offset = (page - 1) * per_page,

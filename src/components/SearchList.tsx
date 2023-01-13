@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Grid, Button, Input, Box, Text } from "theme-ui"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 // Component imports
 import { PokemonCard } from "./PokemonCard"
@@ -9,6 +10,18 @@ import { PokemonCard } from "./PokemonCard"
 // Utilities imports
 import { paginator } from "../utils/utils"
 import theme from "../gatsby-plugin-theme-ui/index"
+
+export type PokemonCardResultsType = {
+  id: string
+  name: string
+  number: number
+  imageFile: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  } 
+}
+
 
 export const SearchList = () => {
   // Query to get Pokémons' teaser data
@@ -36,12 +49,12 @@ export const SearchList = () => {
 
   // States: we're using React useState hooks to save and update data for the search
   const [query, setQuery] = useState("")
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState<number>(1)
 
   const results = data.allPokemon.pokemons
 
   const filteredResults = paginator(
-    results.filter(filter_data =>
+    results.filter((filter_data: { name: string}) =>
       filter_data.name.toLowerCase().includes(query.toLowerCase())
     ),
     page,
@@ -49,7 +62,7 @@ export const SearchList = () => {
   )
 
   // Function to build out the pagination
-  const paginationLinks = (number, current_page) => {
+  const paginationLinks = (number:number, current_page:number) => {
     let elements = []
     for (let i = 1; i <= number; i++) {
       if (current_page !== i) {
@@ -133,7 +146,7 @@ export const SearchList = () => {
               marginBottom: 4,
             }}
           >
-            {filteredResults.data.map(result => (
+            {filteredResults.data.map((result: PokemonCardResultsType)  => (
               // Individual result
               <PokemonCard
                 key={result.id}
@@ -148,9 +161,9 @@ export const SearchList = () => {
           {/* Pagination */}
           <Box className="pager">
             {/* Previous button */}
-            {filteredResults.pre_page > 0 ? (
+            {filteredResults.pre_page && filteredResults.pre_page > 0 ? (
               <Button
-                onClick={() => setPage(filteredResults.pre_page)}
+                onClick={() => setPage(filteredResults.pre_page as number)}
                 sx={{
                   mx: 2,
                   my: 1,
@@ -166,9 +179,9 @@ export const SearchList = () => {
             {paginationLinks(filteredResults.total_pages, filteredResults.page)}
 
             {/* Next Button */}
-            {filteredResults.next_page > 0 ? (
+            {filteredResults.next_page && filteredResults.next_page > 0 ? (
               <Button
-                onClick={() => setPage(filteredResults.next_page)}
+                onClick={() => setPage(filteredResults.next_page as number)}
                 sx={{
                   mx: 2,
                   my: 1,

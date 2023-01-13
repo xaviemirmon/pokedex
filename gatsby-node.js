@@ -55,7 +55,7 @@ exports.createPages = async ({ actions, graphql }) => {
   pages.forEach(page => {
     actions.createPage({
       path: page.name.toLowerCase(),
-      component: require.resolve("./src/templates/pokemon.js"),
+      component: require.resolve("./src/templates/pokemon.tsx"),
       context: {
         id: page.id,
       },

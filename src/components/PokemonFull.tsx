@@ -2,8 +2,9 @@
 import React from "react"
 import { Box, Heading, Grid } from "theme-ui"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { PokemonPageResultsType } from "../templates/pokemon"
 
-export const PokemonFull = ({ page }) => {
+export const PokemonFull = ({ page }: { page: PokemonPageResultsType}) => {
   return (
     <>
       <Grid
